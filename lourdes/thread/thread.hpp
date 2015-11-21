@@ -10,11 +10,9 @@ class Thread
 {
 public:
     Thread();
-
     virtual ~Thread();
 
     void start();
-
     void join();
 
 private:
