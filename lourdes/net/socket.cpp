@@ -1,6 +1,5 @@
 #include "socket.hpp"
 
-// Boost includes
 #include <boost/bind.hpp>
 #include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>

@@ -1,6 +1,5 @@
 #include "thread.hpp"
 
-// Boost includes
 #include <boost/thread.hpp>
 
 namespace lourdes { namespace cpu {

@@ -1,6 +1,5 @@
 #include "timer.hpp"
 
-// Boost includes
 #include <boost/chrono.hpp>
 
 namespace lourdes { namespace cpu {
