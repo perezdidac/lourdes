@@ -1,8 +1,7 @@
-#ifndef __LOURDES_THREAD_HPP
-#define __LOURDES_THREAD_HPP
+#ifndef __LOURDES_CPU_THREAD_HPP
+#define __LOURDES_CPU_THREAD_HPP
 
-namespace lourdes
-{
+namespace lourdes { namespace cpu {
 
 class ThreadImpl;
 
@@ -15,16 +14,13 @@ public:
     void start();
     void join();
 
-private:
-    static void threadStart(Thread* This);
-
-protected:
+public:
     virtual void run() = 0;
     
 private:
     ThreadImpl* impl;
 };
 
-}
+}}
 
-#endif // __LOURDES_THREAD_HPP
+#endif // __LOURDES_CPU_THREAD_HPP

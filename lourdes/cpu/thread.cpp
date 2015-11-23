@@ -3,14 +3,18 @@
 // Boost includes
 #include <boost/thread.hpp>
 
-namespace lourdes
-{
+namespace lourdes { namespace cpu {
 
 class ThreadImpl
 {
 public:
     boost::thread* thread;
 };
+
+void threadStart(Thread* This)
+{
+    This->run();
+}
 
 Thread::Thread()
 {
@@ -42,9 +46,4 @@ void Thread::join()
     impl->thread = NULL;
 }
 
-void Thread::threadStart(Thread* This)
-{
-    This->run();
-}
-
-}
+}}

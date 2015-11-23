@@ -5,14 +5,15 @@
 #include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>
 
-namespace lourdes {
+namespace lourdes { namespace net {
 
 static boost::asio::io_service io_service;
 
 class SessionImpl
 {
 public:
-    SessionImpl(boost::asio::io_service& io_service);
+    SessionImpl(boost::asio::io_service& io_service)
+        : socket_(io_service) {};
 
 public:
     boost::asio::ip::tcp::socket socket_;
@@ -65,4 +66,40 @@ bool Session::connect(const char* hostname, unsigned short port)
     return !ec;
 }
 
+class ServerImpl
+{
+public:
+    ServerImpl();
+    ~ServerImpl();
+
+public:
+    boost::asio::io_service io_service_;
+    boost::asio::ip::tcp::acceptor* acceptor_;
+};
+
+Server::Server()
+{
+    impl->acceptor_ = NULL;
 }
+
+Server::~Server()
+{
+    close();
+
+    if (impl->acceptor_ != NULL)
+    {
+        delete impl->acceptor_;
+        impl->acceptor_ = NULL;
+    }
+}
+
+void Server::close()
+{
+    if (impl->acceptor_ == NULL)
+        return;
+
+    boost::system::error_code ec;
+    impl->acceptor_->close(ec);
+}
+
+}}

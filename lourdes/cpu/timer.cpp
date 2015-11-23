@@ -3,7 +3,7 @@
 // Boost includes
 #include <boost/chrono.hpp>
 
-namespace lourdes {
+namespace lourdes { namespace cpu {
 
 class TimerImpl
 {
@@ -32,4 +32,4 @@ int Timer::elapsed()
     return (int)boost::chrono::duration_cast<boost::chrono::milliseconds>(boost::chrono::steady_clock::now() - impl->last).count();
 }
 
-}
+}}

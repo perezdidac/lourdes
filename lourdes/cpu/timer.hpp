@@ -1,7 +1,7 @@
-#ifndef __LOURDES_TIMER_HPP
-#define __LOURDES_TIMER_HPP
+#ifndef __LOURDES_CPU_TIMER_HPP
+#define __LOURDES_CPU_TIMER_HPP
 
-namespace lourdes {
+namespace lourdes { namespace cpu {
 
 class TimerImpl;
 
@@ -18,6 +18,6 @@ private:
     TimerImpl* impl;
 };
 
-}
+}}
 
-#endif // __LOURDES_TIMER_HPP
+#endif // __LOURDES_CPU_TIMER_HPP
