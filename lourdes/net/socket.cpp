@@ -92,6 +92,43 @@ Server::~Server()
     }
 }
 
+bool Server::listen(unsigned short port)
+{
+    try
+    {
+        impl->acceptor_ = new boost::asio::ip::tcp::acceptor(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), (unsigned short)port));
+
+        // The following line makes the acceptor to not block when waiting for
+        // incomming connections. This has been implemented because the acceptor
+        // was impossible to be closed under Linux. Doing this, the accept()
+        // method must sleep for avoid overloading the CPU.
+        boost::system::error_code ec;
+        impl->acceptor_->non_blocking(true, ec);
+
+        return true;
+    }
+    catch (std::exception&)
+    {
+        return false;
+    }
+}
+
+Session* Server::accept()
+{
+    Session* session = new Session;
+
+    boost::system::error_code ec;
+    impl->acceptor_->accept(session->impl->socket_, ec);
+
+    if (ec)
+    {
+        delete session;
+        return NULL;
+    }
+
+    return session;
+}
+
 void Server::close()
 {
     if (impl->acceptor_ == NULL)

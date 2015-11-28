@@ -23,6 +23,9 @@ Thread::Thread()
 
 Thread::~Thread()
 {
+    if (impl->thread != NULL)
+        join();
+
     delete impl;
 }
 

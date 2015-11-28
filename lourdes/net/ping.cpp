@@ -1,7 +1,5 @@
 #include "ping.hpp"
 
-#include "socket.hpp"
-
 #include <boost/asio.hpp>
 
 namespace lourdes { namespace net {
