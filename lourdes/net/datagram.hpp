@@ -1,6 +1,8 @@
 #ifndef __LOURDES_NET_DATAGRAM_HPP
 #define __LOURDES_NET_DATAGRAM_HPP
 
+#include <stdlib.h>
+
 namespace lourdes { namespace net {
 
 /// \brief  Broadcasts an UDP datagram.

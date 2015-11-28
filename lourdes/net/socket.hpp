@@ -1,6 +1,8 @@
 #ifndef __LOURDES_NET_SOCKET_HPP
 #define __LOURDES_NET_SOCKET_HPP
 
+#include <stdlib.h>
+
 namespace lourdes { namespace net {
 
 class SessionImpl;

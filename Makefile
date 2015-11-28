@@ -3,8 +3,9 @@ SRC = \
     lourdes/cpu/sleep.cpp \
     lourdes/cpu/thread.cpp \
     lourdes/cpu/timer.cpp \
-    lourdes/cpu/ping.cpp \
-    lourdes/cpu/socket.cpp
+    lourdes/net/datagram.cpp \
+    lourdes/net/ping.cpp \
+    lourdes/net/socket.cpp
 
 OBJ = $(SRC:.cpp=.o)
 OUT = liblourdes.a
@@ -14,10 +15,11 @@ CC = g++
 
 .SUFFIXES: .cpp
 .cpp.o:
-    $(CC) $(INCLUDES) $(CCFLAGS) -c $< -o $@
+	$(CC) $(INCLUDES) $(CCFLAGS) -c $< -o $@
 
 $(OUT): $(OBJ)
-    ar rcs $(OUT) $(OBJ)
+	ar rcs $(OUT) $(OBJ)
 
 clean:
-    rm -f $(OBJ) $(OUT) Makefile.bak
+	rm -f $(OBJ) $(OUT) Makefile.bak
+
