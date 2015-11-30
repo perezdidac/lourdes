@@ -25,23 +25,21 @@ namespace lourdes { namespace log {
 /// error.
 typedef enum
 {
-    LOG_LEVEL_DEBUG,    ///<    The most verbose debug level. Must be used for debugging purposes.
-    LOG_LEVEL_INFO,     ///<    Default debug level, used for notifications and regular messages.
-    LOG_LEVEL_WARNING,  ///<    Must be used when something is could be wrong and the administrator should take a look.
-    LOG_LEVEL_ERROR,    ///<    Must be used for situations in which the administrator must take a look quickly.
-    LOG_LEVEL_CRITICAL, ///<    Must be used for critical situations in which the system could get down.
-    LOG_LEVEL_DISABLED, ///<    Used for disabling the log system.
+    LOG_LEVEL_DEBUG     = 0,    ///<    The most verbose debug level. Must be used for debugging purposes.
+    LOG_LEVEL_INFO      = 1,    ///<    Default debug level, used for notifications and regular messages.
+    LOG_LEVEL_WARNING   = 2,    ///<    Must be used when something is could be wrong and the administrator should take a look.
+    LOG_LEVEL_ERROR     = 3,    ///<    Must be used for situations in which the administrator must take a look quickly.
+    LOG_LEVEL_CRITICAL  = 4,    ///<    Must be used for critical situations in which the system could get down.
+    LOG_LEVEL_DISABLED  = 5,    ///<    Used for disabling the log system.
 } LogLevel;
 
 /// \brief  Initializes the Singleton-based log class.
 /// \param  app             Application name, which will be used for the log
 /// file name.
-/// \param  version         Version code of the application, which will be used
-/// for the log initial message.
 /// \param  directory       Directory in which the log files will be saved.
 /// \param  fileLogLevel    Indicates the log level for the file output.
 /// \param  outLogLevel     Indicates the log level for the standard error.
-void init(const char* app, int version, const char* directory, LogLevel fileLogLevel, LogLevel outLogLevel);
+void init(const char* app, const char* directory, LogLevel fileLogLevel, LogLevel outLogLevel);
 
 /// \brief  Logs a message with DEBUG log level.
 /// \param  fmt A printf-based string.
