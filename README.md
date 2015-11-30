@@ -1,5 +1,5 @@
 # lourdes
-An easy-to-use lightweighted sparkling boost-based C++ miscellaneous library
+An easy-to-use lightweighted sparkling boost-based C++ miscellaneous library.
 
 ## The whys
 
@@ -26,7 +26,7 @@ I said I should start a library which contains all this stuff. Here it is.
 ### But... why lourdes?
 Because I love C++, and I love boost, and I miss both.
 
-### Emm.. Again, but why lourdes?
+### Emm... again, but why lourdes?
 Because Lourdes is the name of a very lovely special woman.
 
 ## Contribute

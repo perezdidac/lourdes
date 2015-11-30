@@ -3,6 +3,7 @@ SRC = \
     lourdes/cpu/sleep.cpp \
     lourdes/cpu/thread.cpp \
     lourdes/cpu/timer.cpp \
+    lourdes/log/logger.cpp \
     lourdes/net/datagram.cpp \
     lourdes/net/ping.cpp \
     lourdes/net/socket.cpp
