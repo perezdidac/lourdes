@@ -4,6 +4,7 @@
 #include "mutex.hpp"
 #include "sleep.hpp"
 #include "thread.hpp"
+#include "threadpool.hpp"
 #include "timer.hpp"
 
 namespace lourdes {
