@@ -1,6 +1,7 @@
 #ifndef __LOURDES_CHRONO_DATETIME_HPP
 #define __LOURDES_CHRONO_DATETIME_HPP
 
+/// \example    examples/chrono/datetime.cpp
 namespace lourdes { namespace chrono {
 
 /// \brief  Returns the current local date and time with the given format. See

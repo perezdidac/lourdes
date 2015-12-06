@@ -16,6 +16,10 @@ public:
 
     /// \brief  Executes the job.
     virtual void process() = 0;
+
+private:
+    ThreadJob(ThreadJob const&);
+    ThreadJob& operator=(ThreadJob const&);
 };
 
 /// \brief  Represents an object which can be used as a task executor based on
@@ -45,6 +49,8 @@ public:
     bool addThreadJob(ThreadJob* threadJob);
     
 private:
+    ThreadPool(ThreadPool const&);
+    ThreadPool& operator=(ThreadPool const&);
     ThreadPoolImpl* impl;
 };
 

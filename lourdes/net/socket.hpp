@@ -51,6 +51,8 @@ public:
     bool connect(const char* hostname, unsigned short port);
 
 private:
+    Session(Session const&);
+    Session& operator=(Session const&);
     SessionImpl* impl;
 };
 
@@ -82,6 +84,8 @@ public:
     void close();
 
 private:
+    Server(Server const&);
+    Server& operator=(Server const&);
     ServerImpl* impl;
 };
 

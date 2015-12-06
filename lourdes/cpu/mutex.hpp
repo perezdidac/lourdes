@@ -1,6 +1,7 @@
 #ifndef __LOURDES_CPU_MUTEX_HPP
 #define __LOURDES_CPU_MUTEX_HPP
 
+/// \example    examples/cpu/mutex.cpp
 namespace lourdes { namespace cpu {
 
 class MutexImpl;
@@ -28,6 +29,8 @@ public:
     void unlock();
 
 private:
+    Mutex(Mutex const&);
+    Mutex& operator=(Mutex const&);
     MutexImpl* impl;
 };
 

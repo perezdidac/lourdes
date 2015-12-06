@@ -1,6 +1,7 @@
 #ifndef __LOURDES_CPU_TIMER_HPP
 #define __LOURDES_CPU_TIMER_HPP
 
+/// \example    examples/cpu/timer.cpp
 namespace lourdes { namespace cpu {
 
 class TimerImpl;
@@ -25,6 +26,8 @@ public:
     int elapsed();
 
 private:
+    Timer(Timer const&);
+    Timer& operator=(Timer const&);
     TimerImpl* impl;
 };
 

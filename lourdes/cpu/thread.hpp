@@ -34,6 +34,8 @@ public:
     virtual void run() = 0;
     
 private:
+    Thread(Thread const&);
+    Thread& operator=(Thread const&);
     ThreadImpl* impl;
 };
 
