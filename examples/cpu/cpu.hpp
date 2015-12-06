@@ -3,6 +3,7 @@
 
 #include "mutex.hpp"
 #include "sleep.hpp"
+#include "thread.hpp"
 #include "timer.hpp"
 
 namespace lourdes { namespace examples { namespace cpu {

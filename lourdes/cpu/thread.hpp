@@ -1,6 +1,7 @@
 #ifndef __LOURDES_CPU_THREAD_HPP
 #define __LOURDES_CPU_THREAD_HPP
 
+/// \example    examples/cpu/thread.cpp
 namespace lourdes { namespace cpu {
 
 class ThreadImpl;
