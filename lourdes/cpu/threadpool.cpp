@@ -14,7 +14,6 @@ public:
     Worker::Worker()
     {
         // Initialize variables
-        running = false;
         threadJob = NULL;
     }
 
@@ -41,22 +40,28 @@ public:
 
     void Worker::run()
     {
+        running = true;
+
         // Thread pool main loop
         for (;;)
         {
-            // Check if must exit
-            if (!running)
-                break;
-
             if (threadJob != NULL)
             {
                 // Process the thread job
                 threadJob->process();
                 delete threadJob;
                 threadJob = NULL;
+
+                // Sleep for a while just for avoid overloading the CPU
+                lourdes::cpu::sleep(10);
+                continue;
             }
 
-            // Wait a couple of milliseconds just for avoid overloading the CPU
+            // Check if must exit
+            if (!running)
+                break;
+
+            // Sleep for a while just for avoid overloading the CPU
             lourdes::cpu::sleep(10);
         }
     }
@@ -70,8 +75,6 @@ public:
 class ThreadPoolImpl : public lourdes::cpu::Thread
 {
 public:
-    ThreadPoolImpl();
-
     void run()
     {
         // Launch the worker threads
@@ -87,10 +90,6 @@ public:
         // Thread pool main loop
         for (;;)
         {
-            // Check if must exit
-            if (!running)
-                break;
-
             // Check if there are elements to process in the queue
             if (threadJob == NULL)
                 threadJob = getThreadJob();
@@ -113,6 +112,10 @@ public:
                 continue;
             }
 
+            // Check if must exit
+            if (!running)
+                break;
+
             // Wait a couple of milliseconds just for avoid overloading the CPU
             lourdes::cpu::sleep(10);
         }
@@ -130,17 +133,11 @@ public:
         }
     }
 
-    bool addThreadJob(ThreadJob* threadJob)
+    void addThreadJob(ThreadJob* threadJob)
     {
-        bool enqueued = false;
         mutex.lock();
-        if (maxThreadJobs > (int)threadJobs.size() || maxThreadJobs == 0)
-        {
-            threadJobs.push_back(threadJob);
-            enqueued = true;
-        }
+        threadJobs.push_back(threadJob);
         mutex.unlock();
-        return enqueued;
     }
 
     ThreadJob* getThreadJob()
@@ -161,7 +158,6 @@ public:
 
 public:
     int numThreads;
-    int maxThreadJobs;
     std::vector<Worker*> workers;
     std::vector<ThreadJob*> threadJobs;
     lourdes::cpu::Mutex mutex;
@@ -195,9 +191,9 @@ void ThreadPool::stop()
     impl->join();
 }
 
-bool ThreadPool::addThreadJob(ThreadJob* threadJob)
+void ThreadPool::addThreadJob(ThreadJob* threadJob)
 {
-    return impl->addThreadJob(threadJob);
+    impl->addThreadJob(threadJob);
 }
 
 }}

@@ -11,6 +11,9 @@ class ThreadPoolImpl;
 class ThreadJob
 {
 public:
+    /// \brief  Default constructor. Does nothing.
+    ThreadJob() { }
+
     /// \brief  Destroys the object and all the associated resources to it.
     virtual ~ThreadJob() { }
 
@@ -45,8 +48,7 @@ public:
     /// \brief  Adds a thread job to the queue.
     /// \param  threadJob   A pointer to the thread job to be added to the
     /// queue.
-    /// \return A flag which indicates if the thread job has been aded.
-    bool addThreadJob(ThreadJob* threadJob);
+    void addThreadJob(ThreadJob* threadJob);
     
 private:
     ThreadPool(ThreadPool const&);
