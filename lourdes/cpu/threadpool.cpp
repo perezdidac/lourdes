@@ -5,6 +5,7 @@
 
 #include "mutex.hpp"
 #include "sleep.hpp"
+#include "thread.hpp"
 
 namespace lourdes { namespace cpu {
     

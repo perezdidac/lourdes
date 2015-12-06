@@ -1,8 +1,7 @@
 #ifndef __LOURDES_CPU_THREADPOOL_HPP
 #define __LOURDES_CPU_THREADPOOL_HPP
 
-#include "thread.hpp"
-
+/// \example    examples/cpu/threadpool.cpp
 namespace lourdes { namespace cpu {
 
 class ThreadPoolImpl;
