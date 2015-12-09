@@ -2,6 +2,10 @@
 
 #include <boost/thread.hpp>
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 namespace lourdes { namespace cpu {
 
 class ThreadImpl

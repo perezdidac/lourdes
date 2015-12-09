@@ -7,6 +7,10 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 namespace lourdes { namespace log {
 
 /// \brief  Singleton-based logger class.

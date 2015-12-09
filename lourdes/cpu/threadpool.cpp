@@ -7,12 +7,16 @@
 #include "sleep.hpp"
 #include "thread.hpp"
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 namespace lourdes { namespace cpu {
     
 class Worker : public lourdes::cpu::Thread
 {
 public:
-    Worker::Worker()
+    Worker()
     {
         // Initialize variables
         threadJob = NULL;
@@ -24,7 +28,7 @@ public:
         join();
     }
 
-    bool Worker::busy()
+    bool busy()
     {
         mutex.lock();
         bool busy = threadJob != NULL;
@@ -32,14 +36,14 @@ public:
         return busy;
     }
 
-    void Worker::setThreadJob(ThreadJob* threadJob)
+    void setThreadJob(ThreadJob* threadJob)
     {
         mutex.lock();
         this->threadJob = threadJob;
         mutex.unlock();
     }
 
-    void Worker::run()
+    void run()
     {
         running = true;
 

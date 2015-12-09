@@ -4,6 +4,10 @@
 #include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 namespace lourdes { namespace net {
 
 static boost::asio::io_service io_service;
