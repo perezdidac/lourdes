@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="net">
+      <UniqueIdentifier>{e224214a-103f-47f9-a07d-39559929d2e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpu">
+      <UniqueIdentifier>{de4d122b-a3da-4ca4-b630-12226215270d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="chrono">
+      <UniqueIdentifier>{2ffecd03-533d-4e3b-8f27-20ce130384f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{2d9436e1-ca23-4739-8b73-67275362613d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="net\ping.hpp">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\socket.hpp">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\net.hpp">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\thread.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\timer.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\cpu.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\sleep.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="lourdes.hpp" />
+    <ClInclude Include="cpu\mutex.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="net\datagram.hpp">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="log\log.hpp">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\logger.hpp">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="chrono\chrono.hpp">
+      <Filter>chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="chrono\datetime.hpp">
+      <Filter>chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\threadpool.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="net\socket.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ping.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\timer.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\thread.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\sleep.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\mutex.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="net\datagram.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="log\logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="chrono\datetime.cpp">
+      <Filter>chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\threadpool.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Doxyfile" />
+    <None Include="..\Makefile" />
+    <None Include="..\LICENSE" />
+    <None Include="..\README.md" />
+  </ItemGroup>
+</Project>
