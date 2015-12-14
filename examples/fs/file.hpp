@@ -4,6 +4,7 @@
 namespace lourdes { namespace examples { namespace fs {
 
 void writeToFile();
+void readFromFile();
 
 }}}
 

@@ -63,7 +63,7 @@ bool get(const char* hostname, const char* path, const char* filename)
 
     // Try to open a file for writing
     lourdes::fs::File file;
-    if (!file.open(filename))
+    if (!file.open(filename, lourdes::fs::File::OPEN_MODE_WRITE))
     {
         socket.close();
         return false;

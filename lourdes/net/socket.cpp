@@ -1,5 +1,7 @@
 #include "socket.hpp"
 
+#include <string.h>
+
 #include <boost/bind.hpp>
 #include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>
@@ -37,6 +39,16 @@ size_t Session::read(char* data, size_t size)
 {
     boost::system::error_code ec;
     size_t bytes_transferred = impl->socket_.read_some(boost::asio::buffer(data, size), ec);
+    return bytes_transferred;
+}
+
+size_t Session::readUntil(char* data, const char* delim)
+{
+    boost::system::error_code ec;
+    boost::asio::streambuf response;
+    size_t bytes_transferred = boost::asio::read_until(impl->socket_, response, delim, ec);
+    const char* buffer = boost::asio::buffer_cast<const char*>(response.data());
+    memcpy(data, buffer, bytes_transferred);
     return bytes_transferred;
 }
 

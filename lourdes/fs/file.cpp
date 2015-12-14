@@ -27,14 +27,32 @@ File::~File()
     delete impl;
 }
 
-bool File::open(const char* filename)
+bool File::open(const char* filename, OpenMode openMode)
 {
     if (impl->file != NULL)
         return false;
 
-    impl->file = fopen(filename, "wb");
+    char* mode;
+    if (openMode == OPEN_MODE_READ)
+        mode = "rb";
+    else if (openMode == OPEN_MODE_WRITE)
+        mode = "wb";
+    else
+        return false;
+
+    impl->file = fopen(filename, mode);
 
     return impl->file != NULL;
+}
+
+bool File::read(char* buffer, int length)
+{
+    if (impl->file == NULL)
+        return false;
+
+    fread(buffer, 1, length, impl->file);
+
+    return true;
 }
 
 bool File::write(const char* buffer, int length)

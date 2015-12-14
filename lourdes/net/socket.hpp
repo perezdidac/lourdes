@@ -27,9 +27,15 @@ public:
     /// \param  data    A pointer where the data starts from.
     /// \param  size    Total amount of bytes to be read to the socket.
     /// \return The total amount of bytes read from the socket. If it does not
-    /// correspond to the data to be sent, it means that the connection has been
+    /// correspond to the data to be read, it means that the connection has been
     /// closed.
     size_t read(char* data, size_t size);
+
+    /// \brief  Blocks until the given string is found.
+    /// \param  data    A pointer where the data starts from.
+    /// \param  delim   A string that will be found in order to stop reading.
+    /// \return The total amount of bytes read from the socket.
+    size_t readUntil(char* data, const char* delim);
     
     /// \brief  Blocks until the given amount of data is written to the socket,
     /// measured in bytes.
