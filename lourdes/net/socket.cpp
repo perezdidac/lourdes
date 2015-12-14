@@ -60,7 +60,6 @@ bool Session::connect(const char* hostname, unsigned short port)
     boost::asio::ip::tcp::resolver resolver(io_service);
     boost::asio::ip::tcp::resolver::query query(hostname, boost::lexical_cast<std::string>(port));
     boost::asio::ip::tcp::resolver::iterator iterator = resolver.resolve(query, ec);
-
     if (ec)
         return false;
 

@@ -3,6 +3,7 @@
 
 #include "chrono/chrono.hpp"
 #include "cpu/cpu.hpp"
+#include "fs/fs.hpp"
 #include "log/log.hpp"
 #include "net/net.hpp"
 

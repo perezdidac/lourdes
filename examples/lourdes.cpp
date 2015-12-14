@@ -1,5 +1,8 @@
 #include "chrono/chrono.hpp"
 #include "cpu/cpu.hpp"
+#include "fs/fs.hpp"
+#include "log/log.hpp"
+#include "net/net.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -14,9 +17,14 @@ int main(int argc, char* argv[])
     lourdes::examples::cpu::createThread();
     lourdes::examples::cpu::launchJobs();
 
+    // Test fs
+    // ...
+
     // Test log
+    // ...
 
     // Test net
+    lourdes::examples::net::http::getFile();
 
     return 0;
 }
