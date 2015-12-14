@@ -11,6 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\lourdes\lourdes.vcxproj">
+      <Project>{c8b03c7f-e827-43c5-abd4-b848319d385c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="chrono\datetime.cpp" />
     <ClCompile Include="cpu\mutex.cpp" />
     <ClCompile Include="cpu\sleep.cpp" />
@@ -19,10 +24,8 @@
     <ClCompile Include="cpu\timer.cpp" />
     <ClCompile Include="fs\file.cpp" />
     <ClCompile Include="log\logger.cpp" />
-    <ClCompile Include="net\datagram.cpp" />
+    <ClCompile Include="lourdes.cpp" />
     <ClCompile Include="net\http\http.cpp" />
-    <ClCompile Include="net\ping.cpp" />
-    <ClCompile Include="net\socket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chrono\chrono.hpp" />
@@ -37,31 +40,20 @@
     <ClInclude Include="fs\fs.hpp" />
     <ClInclude Include="log\log.hpp" />
     <ClInclude Include="log\logger.hpp" />
-    <ClInclude Include="lourdes.hpp" />
-    <ClInclude Include="net\datagram.hpp" />
     <ClInclude Include="net\http\http.hpp" />
     <ClInclude Include="net\net.hpp" />
-    <ClInclude Include="net\ping.hpp" />
-    <ClInclude Include="net\socket.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Doxyfile" />
-    <None Include="..\LICENSE" />
-    <None Include="..\Makefile" />
-    <None Include="..\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C8B03C7F-E827-43C5-ABD4-B848319D385C}</ProjectGuid>
-    <RootNamespace>lourdes</RootNamespace>
+    <ProjectGuid>{D11F8EEE-FEB8-472D-AA3B-DA7345F33158}</ProjectGuid>
+    <RootNamespace>lourdesTests</RootNamespace>
+    <ProjectName>examples</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v120</PlatformToolset>
@@ -77,10 +69,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\..\software\boost-1.56.0;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\..\software\boost-1.56.0\stage\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\..\..\software\boost-1.56.0;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\..\software\boost-1.56.0\stage\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

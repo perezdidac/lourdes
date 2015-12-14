@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="lourdes.cpp" />
+    <ClCompile Include="chrono\datetime.cpp">
+      <Filter>chrono</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\sleep.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\mutex.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\timer.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\thread.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\threadpool.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="net\http\http.cpp">
+      <Filter>net\http</Filter>
+    </ClCompile>
+    <ClCompile Include="fs\file.cpp">
+      <Filter>fs</Filter>
+    </ClCompile>
+    <ClCompile Include="log\logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="chrono">
+      <UniqueIdentifier>{6879482c-b452-4670-bb74-4dab2fbc411a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpu">
+      <UniqueIdentifier>{7151d5e8-f8df-4696-8493-59e4da1b4036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{197a9569-1b1a-4b17-ab4d-02bc1bcedd51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net\http">
+      <UniqueIdentifier>{f91f9d8c-7260-4c22-9654-bdea21d583b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fs">
+      <UniqueIdentifier>{28168a1f-e627-40e6-b4f9-4d643de33d48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{abdeadfe-4d91-4885-b36d-9fb60a133cce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chrono\chrono.hpp">
+      <Filter>chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="chrono\datetime.hpp">
+      <Filter>chrono</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\sleep.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\cpu.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\mutex.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\timer.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\thread.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\threadpool.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="net\net.hpp">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\http\http.hpp">
+      <Filter>net\http</Filter>
+    </ClInclude>
+    <ClInclude Include="fs\file.hpp">
+      <Filter>fs</Filter>
+    </ClInclude>
+    <ClInclude Include="fs\fs.hpp">
+      <Filter>fs</Filter>
+    </ClInclude>
+    <ClInclude Include="log\logger.hpp">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\log.hpp">
+      <Filter>log</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

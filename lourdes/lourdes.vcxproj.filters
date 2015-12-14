@@ -13,6 +13,12 @@
     <Filter Include="log">
       <UniqueIdentifier>{2d9436e1-ca23-4739-8b73-67275362613d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="fs">
+      <UniqueIdentifier>{08671a7d-235f-4416-9585-9dee62204f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net\http">
+      <UniqueIdentifier>{2704606b-2a91-4f25-8645-4fe37f4fe9ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="net\ping.hpp">
@@ -58,6 +64,15 @@
     <ClInclude Include="cpu\threadpool.hpp">
       <Filter>cpu</Filter>
     </ClInclude>
+    <ClInclude Include="fs\fs.hpp">
+      <Filter>fs</Filter>
+    </ClInclude>
+    <ClInclude Include="fs\file.hpp">
+      <Filter>fs</Filter>
+    </ClInclude>
+    <ClInclude Include="net\http\http.hpp">
+      <Filter>net\http</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="net\socket.cpp">
@@ -90,11 +105,17 @@
     <ClCompile Include="cpu\threadpool.cpp">
       <Filter>cpu</Filter>
     </ClCompile>
+    <ClCompile Include="fs\file.cpp">
+      <Filter>fs</Filter>
+    </ClCompile>
+    <ClCompile Include="net\http\http.cpp">
+      <Filter>net\http</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Doxyfile" />
     <None Include="..\Makefile" />
     <None Include="..\LICENSE" />
     <None Include="..\README.md" />
+    <None Include="..\Doxyfile" />
   </ItemGroup>
 </Project>
