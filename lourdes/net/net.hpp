@@ -1,6 +1,7 @@
 #ifndef __LOURDES_NET_HPP
 #define __LOURDES_NET_HPP
 
+#include "http/http.hpp"
 #include "datagram.hpp"
 #include "ping.hpp"
 #include "socket.hpp"

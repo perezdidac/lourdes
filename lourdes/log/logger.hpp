@@ -19,6 +19,7 @@
 /// \brief  Macro that calls lourdes::log::critical for logging a message with CRITICAL log level.
 #define LOG_CRITICAL(x, ...)    lourdes::log::critical(x, ## __VA_ARGS__)
 
+/// \example    examples/log/logger.cpp
 namespace lourdes { namespace log {
 
 /// \brief  Contains the possible log level values for both file and standard
