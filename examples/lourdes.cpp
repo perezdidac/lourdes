@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
     lourdes::examples::cpu::launchJobs();
 
     // Test fs
-    // ...
+    lourdes::examples::fs::writeToFile();
 
     // Test log
     // ...

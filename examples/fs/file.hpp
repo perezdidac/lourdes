@@ -3,6 +3,8 @@
 
 namespace lourdes { namespace examples { namespace fs {
 
+void writeToFile();
+
 }}}
 
 #endif // __LOURDES_EXAMPLES_FS_FILE_HPP

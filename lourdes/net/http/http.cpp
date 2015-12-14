@@ -1,5 +1,7 @@
 #include "http.hpp"
 
+#include "../../fs/file.hpp"
+
 #include <boost/asio.hpp>
 
 namespace lourdes { namespace net { namespace http {
@@ -59,15 +61,37 @@ bool get(const char* hostname, const char* path, const char* filename)
     std::string header;
     while (std::getline(response_stream, header) && header != "\r") ;
 
-    // Read until EOF, writing data to output as we go.
+    // Try to open a file for writing
+    lourdes::fs::File file;
+    if (!file.open(filename))
+    {
+        socket.close();
+        return false;
+    }
 
+    // Read until EOF, writing data to output as we go
+    int written = 0;
     while (boost::asio::read(socket, response, boost::asio::transfer_at_least(1), ec))
     {
         // Read data
-        //response
+        const char* buffer = boost::asio::buffer_cast<const char*>(response.data());
+        int length = response.size();
+        file.write(buffer + written, length - written);
+        written = length;
     }
+
+    // Close the file
+    file.close();
+
     if (ec != boost::asio::error::eof)
+    {
+        socket.close();
         return false;
+    }
+
+    socket.close();
+
+    return true;
 }
 
 }}}
