@@ -7,6 +7,8 @@ SRC = \
     lourdes/cpu/timer.cpp \
     lourdes/fs/file.cpp \
     lourdes/log/logger.cpp \
+    lourdes/net/ftp.cpp \
+    lourdes/net/http.cpp \
     lourdes/net/datagram.cpp \
     lourdes/net/ping.cpp \
     lourdes/net/socket.cpp

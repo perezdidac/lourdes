@@ -20,6 +20,7 @@
     <ClCompile Include="fs\file.cpp" />
     <ClCompile Include="log\logger.cpp" />
     <ClCompile Include="net\datagram.cpp" />
+    <ClCompile Include="net\ftp\ftp.cpp" />
     <ClCompile Include="net\http\http.cpp" />
     <ClCompile Include="net\ping.cpp" />
     <ClCompile Include="net\socket.cpp" />
@@ -39,6 +40,7 @@
     <ClInclude Include="log\logger.hpp" />
     <ClInclude Include="lourdes.hpp" />
     <ClInclude Include="net\datagram.hpp" />
+    <ClInclude Include="net\ftp\ftp.hpp" />
     <ClInclude Include="net\http\http.hpp" />
     <ClInclude Include="net\net.hpp" />
     <ClInclude Include="net\ping.hpp" />
@@ -51,7 +53,7 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C8B03C7F-E827-43C5-ABD4-B848319D385C}</ProjectGuid>
+    <ProjectGuid>{2FD88FA0-C18B-4140-96FD-56BC6A0029B0}</ProjectGuid>
     <RootNamespace>lourdes</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

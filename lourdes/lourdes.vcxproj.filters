@@ -19,6 +19,9 @@
     <Filter Include="net\http">
       <UniqueIdentifier>{2704606b-2a91-4f25-8645-4fe37f4fe9ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="net\ftp">
+      <UniqueIdentifier>{f30b3145-3ef8-4fe0-8bcf-ecff9e5f28bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="net\ping.hpp">
@@ -73,6 +76,9 @@
     <ClInclude Include="net\http\http.hpp">
       <Filter>net\http</Filter>
     </ClInclude>
+    <ClInclude Include="net\ftp\ftp.hpp">
+      <Filter>net\ftp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="net\socket.cpp">
@@ -110,6 +116,9 @@
     </ClCompile>
     <ClCompile Include="net\http\http.cpp">
       <Filter>net\http</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ftp\ftp.cpp">
+      <Filter>net\ftp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
