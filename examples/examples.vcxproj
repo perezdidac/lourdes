@@ -23,6 +23,7 @@
     <ClCompile Include="cpu\threadpool.cpp" />
     <ClCompile Include="cpu\timer.cpp" />
     <ClCompile Include="fs\file.cpp" />
+    <ClCompile Include="fs\unique.cpp" />
     <ClCompile Include="log\logger.cpp" />
     <ClCompile Include="lourdes.cpp" />
     <ClCompile Include="net\http\http.cpp" />
@@ -38,6 +39,7 @@
     <ClInclude Include="cpu\timer.hpp" />
     <ClInclude Include="fs\file.hpp" />
     <ClInclude Include="fs\fs.hpp" />
+    <ClInclude Include="fs\unique.hpp" />
     <ClInclude Include="log\log.hpp" />
     <ClInclude Include="log\logger.hpp" />
     <ClInclude Include="net\http\http.hpp" />

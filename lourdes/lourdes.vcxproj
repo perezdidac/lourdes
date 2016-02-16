@@ -18,6 +18,7 @@
     <ClCompile Include="cpu\threadpool.cpp" />
     <ClCompile Include="cpu\timer.cpp" />
     <ClCompile Include="fs\file.cpp" />
+    <ClCompile Include="fs\unique.cpp" />
     <ClCompile Include="log\logger.cpp" />
     <ClCompile Include="net\datagram.cpp" />
     <ClCompile Include="net\ftp\ftp.cpp" />
@@ -36,6 +37,7 @@
     <ClInclude Include="cpu\timer.hpp" />
     <ClInclude Include="fs\file.hpp" />
     <ClInclude Include="fs\fs.hpp" />
+    <ClInclude Include="fs\unique.hpp" />
     <ClInclude Include="log\log.hpp" />
     <ClInclude Include="log\logger.hpp" />
     <ClInclude Include="lourdes.hpp" />
@@ -53,7 +55,7 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2FD88FA0-C18B-4140-96FD-56BC6A0029B0}</ProjectGuid>
+    <ProjectGuid>{C8B03C7F-E827-43C5-ABD4-B848319D385C}</ProjectGuid>
     <RootNamespace>lourdes</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

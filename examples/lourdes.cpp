@@ -20,6 +20,7 @@ int main(int argc, char* argv[])
     // Test fs
     lourdes::examples::fs::writeToFile();
     lourdes::examples::fs::readFromFile();
+    lourdes::examples::fs::printUniqueFilename();
 
     // Test log
     // ...

@@ -79,6 +79,9 @@
     <ClInclude Include="net\ftp\ftp.hpp">
       <Filter>net\ftp</Filter>
     </ClInclude>
+    <ClInclude Include="fs\unique.hpp">
+      <Filter>fs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="net\socket.cpp">
@@ -119,6 +122,9 @@
     </ClCompile>
     <ClCompile Include="net\ftp\ftp.cpp">
       <Filter>net\ftp</Filter>
+    </ClCompile>
+    <ClCompile Include="fs\unique.cpp">
+      <Filter>fs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -29,6 +29,9 @@
     <ClCompile Include="log\logger.cpp">
       <Filter>log</Filter>
     </ClCompile>
+    <ClCompile Include="fs\unique.cpp">
+      <Filter>fs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chrono">
@@ -92,6 +95,9 @@
     </ClInclude>
     <ClInclude Include="log\log.hpp">
       <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="fs\unique.hpp">
+      <Filter>fs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

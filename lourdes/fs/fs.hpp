@@ -2,6 +2,7 @@
 #define __LOURDES_FS_HPP
 
 #include "file.hpp"
+#include "unique.hpp"
 
 namespace lourdes {
 
