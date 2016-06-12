@@ -12,6 +12,7 @@ int main(int argc, char* argv[])
 
     // Test cpu
     lourdes::examples::cpu::lockAndUnlock();
+    lourdes::examples::cpu::randomAndPrint();
     lourdes::examples::cpu::sleepAndPrint();
     lourdes::examples::cpu::countTime();
     lourdes::examples::cpu::createThread();

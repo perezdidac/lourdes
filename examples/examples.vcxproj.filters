@@ -32,6 +32,9 @@
     <ClCompile Include="fs\unique.cpp">
       <Filter>fs</Filter>
     </ClCompile>
+    <ClCompile Include="cpu\random.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chrono">
@@ -98,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="fs\unique.hpp">
       <Filter>fs</Filter>
+    </ClInclude>
+    <ClInclude Include="cpu\random.hpp">
+      <Filter>cpu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

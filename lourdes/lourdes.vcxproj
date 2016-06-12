@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="chrono\datetime.cpp" />
     <ClCompile Include="cpu\mutex.cpp" />
+    <ClCompile Include="cpu\random.cpp" />
     <ClCompile Include="cpu\sleep.cpp" />
     <ClCompile Include="cpu\thread.cpp" />
     <ClCompile Include="cpu\threadpool.cpp" />
@@ -31,6 +32,7 @@
     <ClInclude Include="chrono\datetime.hpp" />
     <ClInclude Include="cpu\cpu.hpp" />
     <ClInclude Include="cpu\mutex.hpp" />
+    <ClInclude Include="cpu\random.hpp" />
     <ClInclude Include="cpu\sleep.hpp" />
     <ClInclude Include="cpu\thread.hpp" />
     <ClInclude Include="cpu\threadpool.hpp" />
@@ -55,7 +57,7 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C8B03C7F-E827-43C5-ABD4-B848319D385C}</ProjectGuid>
+    <ProjectGuid>{2FD88FA0-C18B-4140-96FD-56BC6A0029B0}</ProjectGuid>
     <RootNamespace>lourdes</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -68,7 +70,7 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">

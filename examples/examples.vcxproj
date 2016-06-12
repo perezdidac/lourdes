@@ -18,6 +18,7 @@
   <ItemGroup>
     <ClCompile Include="chrono\datetime.cpp" />
     <ClCompile Include="cpu\mutex.cpp" />
+    <ClCompile Include="cpu\random.cpp" />
     <ClCompile Include="cpu\sleep.cpp" />
     <ClCompile Include="cpu\thread.cpp" />
     <ClCompile Include="cpu\threadpool.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="chrono\datetime.hpp" />
     <ClInclude Include="cpu\cpu.hpp" />
     <ClInclude Include="cpu\mutex.hpp" />
+    <ClInclude Include="cpu\random.hpp" />
     <ClInclude Include="cpu\sleep.hpp" />
     <ClInclude Include="cpu\thread.hpp" />
     <ClInclude Include="cpu\threadpool.hpp" />

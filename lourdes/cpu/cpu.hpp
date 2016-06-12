@@ -2,6 +2,7 @@
 #define __LOURDES_CPU_HPP
 
 #include "mutex.hpp"
+#include "random.hpp"
 #include "sleep.hpp"
 #include "thread.hpp"
 #include "threadpool.hpp"
