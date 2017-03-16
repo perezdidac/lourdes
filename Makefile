@@ -1,6 +1,7 @@
 SRC = \
     lourdes/chrono/datetime.cpp \
     lourdes/cpu/mutex.cpp \
+    lourdes/cpu/process.cpp \
     lourdes/cpu/random.cpp \
     lourdes/cpu/sleep.cpp \
     lourdes/cpu/thread.cpp \

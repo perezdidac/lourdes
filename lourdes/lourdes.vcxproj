@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="chrono\datetime.cpp" />
     <ClCompile Include="cpu\mutex.cpp" />
+    <ClCompile Include="cpu\process.cpp" />
     <ClCompile Include="cpu\random.cpp" />
     <ClCompile Include="cpu\sleep.cpp" />
     <ClCompile Include="cpu\thread.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="chrono\datetime.hpp" />
     <ClInclude Include="cpu\cpu.hpp" />
     <ClInclude Include="cpu\mutex.hpp" />
+    <ClInclude Include="cpu\process.hpp" />
     <ClInclude Include="cpu\random.hpp" />
     <ClInclude Include="cpu\sleep.hpp" />
     <ClInclude Include="cpu\thread.hpp" />
@@ -70,7 +72,7 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">

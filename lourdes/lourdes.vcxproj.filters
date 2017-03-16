@@ -85,6 +85,9 @@
     <ClInclude Include="cpu\random.hpp">
       <Filter>cpu</Filter>
     </ClInclude>
+    <ClInclude Include="cpu\process.hpp">
+      <Filter>cpu</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="net\socket.cpp">
@@ -130,6 +133,9 @@
       <Filter>fs</Filter>
     </ClCompile>
     <ClCompile Include="cpu\random.cpp">
+      <Filter>cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="cpu\process.cpp">
       <Filter>cpu</Filter>
     </ClCompile>
   </ItemGroup>
